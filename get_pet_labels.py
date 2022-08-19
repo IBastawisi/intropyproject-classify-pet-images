@@ -42,4 +42,19 @@ def get_pet_labels(image_dir):
     """
     # Replace None with the results_dic dictionary that you created with this
     # function
-    return None
+
+    # Retrieve the filenames from folder image_dir
+    filename_list = listdir(image_dir)
+
+    # Returen a dictionary with each key being the filename and the value being the pet label
+    return {filename: format_label(filename) for filename in filename_list}
+
+def format_label(label):
+    """
+    Format the label to be all lower case letters without last numbers and with leading and trailing whitespace characters stripped from them.
+    Parameters:
+        label - The label to be formatted (string).
+    Returns:
+        The formatted label (string).
+    """
+    return '_'.join(label.lower().split('_')[:-1]).strip()
