@@ -46,8 +46,7 @@ def get_pet_labels(image_dir):
     # Retrieve the filenames from folder image_dir
     filename_list = listdir(image_dir)
 
-    # Returen a dictionary with each key being the filename and the value being the pet label
-    return {filename: format_label(filename) for filename in filename_list}
+    return {filename: [format_label(filename)] for filename in filename_list}
 
 def format_label(label):
     """
@@ -57,4 +56,4 @@ def format_label(label):
     Returns:
         The formatted label (string).
     """
-    return '_'.join(label.lower().split('_')[:-1]).strip()
+    return ' '.join(label.lower().split('_')[:-1]).strip()
