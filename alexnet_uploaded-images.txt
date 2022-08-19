@@ -1,0 +1,61 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = alexnet 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                        Cat.jpg  label:                           
+ 2 key:     German_shepherd_dog_01.jpg  label:        german shepherd dog
+ 3 key:                      Mouse.jpg  label:                           
+ 4 key:          Siberian_husky_01.jpg  label:             siberian husky
+
+     MATCH:
+
+                       Cat.jpg: 
+Real:                              Classifier:              egyptian cat, cat
+
+    German_shepherd_dog_01.jpg: 
+Real:        german shepherd dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian
+
+                     Mouse.jpg: 
+Real:                              Classifier:          mouse, computer mouse
+
+ NOT A MATCH:
+
+         Siberian_husky_01.jpg: 
+Real:             siberian husky   Classifier:              eskimo dog, husky
+
+# Total Images 4 # Matches: 3 # NOT Matches: 1
+
+     MATCH:
+
+                       Cat.jpg: 
+Real:                              Classifier:              egyptian cat, cat  
+PetLabelDog: 0  ClassLabelDog: 0
+
+    German_shepherd_dog_01.jpg: 
+Real:        german shepherd dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                     Mouse.jpg: 
+Real:                              Classifier:          mouse, computer mouse  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+         Siberian_husky_01.jpg: 
+Real:             siberian husky   Classifier:              eskimo dog, husky  
+PetLabelDog: 1  ClassLabelDog: 1
+
+# Total Images 4 # Matches: 3 # NOT Matches: 1
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  50.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  50.0
+
+** Total Elapsed Runtime: 0:0:0

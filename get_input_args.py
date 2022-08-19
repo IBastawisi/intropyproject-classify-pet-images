@@ -45,7 +45,7 @@ def get_input_args():
     parser = argparse.ArgumentParser()
 
     # Argument 1: Image Folder
-    parser.add_argument('--dir', type=str, default='pet_images',
+    parser.add_argument('--dir', type=str, default='pet_images/',
                         help='Folder that contains the pet images')
     # Argument 2: CNN model architecture
     parser.add_argument('--arch', type=str, default='vgg',

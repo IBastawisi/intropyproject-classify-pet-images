@@ -67,6 +67,6 @@ def classify_images(images_dir, results_dic, model):
     """
     for filename in results_dic:
         dog_label = results_dic[filename][0]
-        classifier_label = classifier(images_dir + '/' + filename, model).lower().strip()
+        classifier_label = classifier(images_dir + filename, model).lower().strip()
         classifier_match = 1 if dog_label in classifier_label else 0
         results_dic[filename].extend([classifier_label, classifier_match])
