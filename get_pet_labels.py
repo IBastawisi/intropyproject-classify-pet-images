@@ -46,6 +46,9 @@ def get_pet_labels(image_dir):
     # Retrieve the filenames from folder image_dir
     filename_list = listdir(image_dir)
 
+    # remove hidden files
+    filename_list = [filename for filename in filename_list if filename[0] != '.']
+
     return {filename: [format_label(filename)] for filename in filename_list}
 
 def format_label(label):
